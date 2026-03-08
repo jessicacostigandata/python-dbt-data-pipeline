@@ -40,7 +40,7 @@ D --> E
 The dbt lineage graph shows how raw ingestion tables are transformed
 into analytics-ready models.
 
-![dbt DAG](enterprise_demo/docs/dbt_dag.png)
+![dbt DAG](./docs/dbt_dag.png)
 
 ## How to Run 
 ### 1. Install dependencies 
