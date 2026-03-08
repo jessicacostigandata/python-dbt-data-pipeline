@@ -21,13 +21,17 @@ The dbt model `dim_users` uses incremental materialization with `unique_key = id
 ```mermaid
 flowchart TD
 
-A[Python Ingestion Script<br>load_users.py] --> B[raw.users<br>Postgres Raw Table]
+A[Python ingestion: load_users.py]
+B[Postgres raw table: raw.users]
+C[dbt staging model: stg_users]
+D[dbt incremental mart: dim_users]
+E[Analytics ready data]
 
-B --> C[dbt Staging Model<br>stg_users]
-
-C --> D[dbt Incremental Mart<br>dim_users]
-
-D --> E[Analytics Ready Data]
+A --> B
+B --> C
+C --> D
+D --> E
+```
 
 ## dbt Lineage
 
