@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fct_user_revenue
+    description: "User-level revenue aggregation"
+    columns:
+      - name: user_id
+        description: "Primary key - one row per user"
+        tests:
+          - not_null
+          - unique
+
+
+models:
+  - name: dim_users
+    description: "Incremental user dimension built from raw.users using updated_at as watermark."
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+
+      - name: email
+        tests:
+          - not_null

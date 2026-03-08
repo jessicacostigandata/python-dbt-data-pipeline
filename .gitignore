@@ -1,0 +1,32 @@
+# Ignore everything by default
+*
+
+# Allow gitignore itself
+!.gitignore
+
+# Allow the pipeline folders
+!enterprise_demo/
+!enterprise_demo/**
+
+!ingestion/
+!ingestion/**
+
+# Allow README if you want one
+!README.md
+
+# Ignore environment / cache
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Ignore dbt artifacts
+enterprise_demo/target/
+enterprise_demo/logs/
+
+# Ignore personal documents
+*.pdf
+*.docx
+*.pptx
+*.jpg
+*.png
