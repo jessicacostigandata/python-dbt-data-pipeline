@@ -1,5 +1,7 @@
 # Python + dbt Data Pipeline Demo
 
+End-to-end data pipeline demonstrating Python ingestion, PostgreSQL raw layer, and dbt incremental modeling.
+
 This project demonstrates a production-style data pipeline combining Python ingestion and dbt transformations on Postgres.
 
 The pipeline includes:
