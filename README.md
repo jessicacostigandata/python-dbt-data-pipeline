@@ -40,7 +40,7 @@ D --> E
 The dbt lineage graph shows how raw ingestion tables are transformed
 into analytics-ready models.
 
-![dbt DAG](docs/dbt_dag.png)
+![dbt DAG](enterprise_demo/docs/dbt_dag.png)
 
 ## How to Run 
 ### 1. Install dependencies 
@@ -51,8 +51,10 @@ python ingestion/load_users.py
 
 ### 3. Run dbt transformations 
 cd enterprise_demo 
+
 dbt build 
 
 ### 4. Verify results 
 SELECT * FROM raw.users; 
+
 SELECT * FROM dim_users;

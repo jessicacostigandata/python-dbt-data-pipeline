@@ -14,6 +14,10 @@
 # Allow README if you want one
 !README.md
 
+# allow docs folder
+!docs/
+!docs/**
+
 # Ignore environment / cache
 .env
 .venv/
@@ -30,3 +34,6 @@ enterprise_demo/logs/
 *.pptx
 *.jpg
 *.png
+
+# Allow diagram images inside docs
+!docs/*.png
